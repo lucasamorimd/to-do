@@ -1,0 +1,287 @@
+:root {
+    --background-light: #F0F2FA;
+    --background-white: #F6f5ff;
+    --text-dark: #0A0040;
+    --color-primary: #6143FF
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik, sans-serif;
+    color: var(--text-dark);
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-white);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.sidebar {
+    width: 100px;
+    background-color: var(--color-primary);
+}
+
+.sidebar img {
+    max-width: 100%;
+}
+
+nav {
+    height: 100px;
+    background-color: var(--background-light);
+    width: calc(100vw - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.btn {
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: 0;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+a.btn {
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+main {
+    display: flex;
+}
+
+section.graph {
+    width: 33%;
+    height: 100%;
+    padding: 20px 20px 0 20px;
+}
+
+.graph_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    flex: 2;
+    font-size: 18px;
+    display: inline-block;
+
+}
+
+.graph_header-line {
+    flex: 1;
+    width: 100px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.graph_header-date {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+
+}
+
+.graph_header-subtitle {
+    margin-top: 10px;
+}
+
+.graph-placeholder {
+    background-color: #ccc;
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+    margin-left: 30px;
+    background: url(/assets/images/graph.png);
+    background-size: contain;
+}
+
+.tasks_left_footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+section.list {
+    padding: 20px 20px 0 20px;
+    flex: 1;
+}
+
+.list_header {
+    display: flex;
+}
+
+.list_header-select {
+    background-color: transparent;
+    border: 0;
+    font-weight: bold;
+    color: var(--text-dark)
+}
+
+.task_list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--background-light);
+    transition: all .3s ease-in-out;
+}
+
+.task:hover {
+    transform: scale(1.05);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--background-light);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.priority, .actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.actions a {
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.actions a:hover {
+    transform: scale(1.5);
+}
+
+.sphere {
+    width: 22px;
+    height: 22px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.task_title {
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+#task_section {
+    margin: auto;
+    padding-top: 20px;
+}
+
+#task_section>h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#task_section>form {
+    background-color: rgba(107, 107, 107, 0.193);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.inputArea {
+    display: block;
+    margin: 10px 0 20px 0;
+}
+
+.inputArea>label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+
+.inputArea>input, .inputArea>select {
+    height: 40px;
+    width: 400px;
+    padding: 5px 10px;
+    transition: all .2s ease-in-out;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.inputArea>textarea {
+    height: 120px;
+    width: 400px;
+    padding: 5px 10px;
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.inputArea>input:focus, .inputArea>textarea:focus, .inputArea>select:focus {
+    transform: scale(1.05);
+}
+
+.inputArea.checkboxArea {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+input.is_done {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    transition: all .2s ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+    transform: scale(1.3);
+    background-color: var(--color-primary);
+}
+
+.inputArea.form-btn {
+    display: flex;
+    justify-content: space-between;
+}

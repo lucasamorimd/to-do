@@ -1,0 +1,39 @@
+-- Planejamento
+
+
+Entidades
+
+-- Usuário,
+    -- Usuário x Tarefas
+    --- Um usuário pode criar várias tarefas.
+    -- Usuário x Categoria
+    --- Um usuário pode ter várias categorias.
+-- Tarefas
+    -- Tarefa x Usuário
+    --- Uma tarefa sempre vai pertencer a um usuário.
+    -- Tarefa x Categoria
+    --- Uma tarefa sempre pertencerá a uma categoria.
+-- Categorias
+    -- Categoria x Tarefa
+    --- Uma categoria pode ter várias tarefas.
+    -- Categoria x Usuário
+    --- Uma categoria sempre pertencerá apenas a um usuário.
+
+-- Detalhamento das migrations
+Usuário: (users)
+-- Padrão do Laravel
+Tarefas: (tasks)
+-- id
+-- Título
+-- Data
+-- Descrição
+-- Categoria
+-- Usuário
+Categoria: (categories)
+-- Id
+-- Nome
+-- Cor
+-- Usuário
+
+
+
